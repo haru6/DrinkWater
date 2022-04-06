@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradiente"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TimePicker
+            android:id="@+id/time_picker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:headerBackground="@color/blue"
+            android:numbersBackgroundColor="@color/dark_blue"
+            android:numbersSelectorColor="@color/light_sky_blue"
+            android:numbersTextColor="@color/white"
+            android:numbersInnerTextColor="@color/white"/>
+
+        <EditText
+            android:id="@+id/edit_interval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:hint="@string/interval"
+            android:inputType="number"
+            android:maxEms="100"
+            android:maxLength="3"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/black"
+            android:textColorLink="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time_picker" />
+
+        <Button
+            android:id="@+id/btn_verify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/verify"
+            android:textStyle="bold"
+            android:backgroundTint="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_interval" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
